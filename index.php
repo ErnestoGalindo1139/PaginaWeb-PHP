@@ -34,5 +34,7 @@
         </tbody>
     </table>
 
+    <?php include("includes/formulario.php") ?>
+
 </body>
 </html>
