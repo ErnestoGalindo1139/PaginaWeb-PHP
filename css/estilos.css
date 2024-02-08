@@ -7,6 +7,11 @@ h1 {
     font-size: 3rem;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 /* Header */
 .titulo {
     background-color: teal;
@@ -133,6 +138,16 @@ h1 {
     border: 2px solid rgb(3, 115, 195);
 }
 
+.btnVerProductos {
+    padding: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: .4rem;
+    background-color: rgb(240, 43, 240);
+    color: white;
+    border: 2px solid rgb(200, 0, 195);
+}
+
 .btnEliminar {
     background-color: rgb(255, 52, 52);
     color: white;
@@ -152,6 +167,11 @@ h1 {
 .btnConsultar:hover {
     cursor: pointer;
     background-color: rgb(70, 178, 255);
+}
+
+.btnVerProductos:hover {
+    cursor: pointer;
+    background-color: rgb(267, 63, 255);
 }
 
 .btnEliminar:hover {
@@ -201,3 +221,65 @@ h1 {
     cursor: default;
 }
 
+.color {
+    background-color: #333;
+    height: 100vh;
+}
+
+.contenedor {
+    padding: 1rem;
+    width: min(120rem, 90%);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin: 0 auto;
+    place-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    justify-content: center;
+    align-items: center;
+    width: min(35rem, 90%);
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
+    padding: 0.4rem;
+}
+
+.card p {
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+.card h2 {
+    margin-top: 1rem;
+}
+
+.card p:last-child {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: blue;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 468px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .contenedor {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

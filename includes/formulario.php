@@ -54,6 +54,7 @@
         <button class="btnModificar">Modificar</button>
         <button class="btnConsultar">Consultar</button>
         <button class="btnEliminar">Eliminar</button>
+        <a class="btnVerProductos" href="./productos.php" target="_blank">Ver Productos</a>
     </div>
 
 </form>
