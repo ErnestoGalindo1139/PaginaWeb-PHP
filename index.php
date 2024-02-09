@@ -26,7 +26,7 @@
                         <td> <?php echo $row['descripcion_producto'] ?> </td>
                         <td> <?php echo $row['precio_producto'] ?> </td>
                         <td> <?php echo $row['cantidad_producto'] ?> </td>
-                        <td> <img width="150" src="<?php echo $row['url_producto'] ?>"> </td>
+                        <td> <img id="imgProducto" width="150" src="./img/<?php echo $row['url_producto'] ?>"> </td>
                         <td> <?php echo $row['id_categoria'] ?> </td>
                         <td> <?php echo $row['id_proveedor'] ?> </td>
                     </tr>
