@@ -1,25 +1,27 @@
-<form class="formulario" method="POST" action="./controller/registrar_producto.php" enctype="multipart/form-data">
+
+
+<form id="formulario" class="formulario" method="POST" action="./controller/registrar_producto.php" enctype="multipart/form-data">
 
 
     <div class="campos">
         <div class="campo">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" value="<?php echo isset($producto['nombre_producto']) ? $producto['nombre_producto'] : ''; ?>">
+            <input type="text" id="nombre" name="nombre" value="<?php echo isset($producto['nombre_producto']) ? $producto['nombre_producto'] : ''; ?>" placeholder="Introduzca un Nombre">
         </div>
 
         <div class="campo">
             <label for="precio">Precio</label>
-            <input type="number" id="precio" name="precio" value="<?php echo isset($producto['precio_producto']) ? $producto['precio_producto'] : ''; ?>">
+            <input type="number" id="precio" name="precio" value="<?php echo isset($producto['precio_producto']) ? $producto['precio_producto'] : ''; ?>" placeholder="Introduzca el precio">
         </div>
 
         <div class="campo">
             <label for="descripcion">Descripcion</label>
-            <textarea name="descripcion" id="descripcion" cols="30" rows="5"><?php echo isset($producto['descripcion_producto']) ? $producto['descripcion_producto'] : ''; ?></textarea>
+            <textarea name="descripcion" id="descripcion" cols="30" rows="5" placeholder="Agregue una descripcion breve del producto"><?php echo isset($producto['descripcion_producto']) ? $producto['descripcion_producto'] : ''; ?></textarea>
         </div>
 
         <div class="campo">
             <label for="cantidad">Cantidad</label>
-            <input type="number" id="cantidad" name="cantidad" value="<?php echo isset($producto['cantidad_producto']) ? $producto['cantidad_producto'] : ''; ?>">
+            <input type="number" id="cantidad" name="cantidad" value="<?php echo isset($producto['cantidad_producto']) ? $producto['cantidad_producto'] : ''; ?>" placeholder="Introduzca la cantidad existente">
         </div>
 
         <div class="campo">
@@ -66,18 +68,21 @@
             </div>
             <img id="imgFormulario" alt="Selected Image" src="" hidden width="300" style="margin: 1rem auto;" />
         </div>
-    </div>
 
-    <div class="campo" style="margin-top: 2rem">
-        <label for="idProducto">Id del producto:</label>
-        <input type="number" id="idProducto" name="idProducto" style="width: 10rem">
+        <div class="campo consultarProducto" style="margin: 3rem 0 2rem 0;">
+            <div style="width: 14rem; margin-right: 4rem;" >
+                <label for="idProducto">Consultar por ID</label>
+                <input type="number" id="idProducto" name="idProducto" placeholder="Introduzca un ID">
+            </div>
+            <button type="button" class="btnConsultar" name="btnConsultar" style="" >Consultar</button>
+        </div>
+
     </div>
 
     <div class="botones">
-        <button type="button" class="btnLimpiar" name="btnLimpiar">Limpiar</button>
+        <button type="button" class="btnLimpiar" name="btnLimpiar" onclick="limpiarFormulario()">Limpiar</button>
         <button type="submit" class="btnAgregar" name="btnAgregar" value="ok">Agregar</button>
         <button type="button" class="btnModificar">Modificar</button>
-        <button type="button" class="btnConsultar" name="btnConsultar">Consultar</button>
         <button type="button" class="btnEliminar">Eliminar</button>
         <a class="btnVerProductos" href="./productos.php" target="_blank">Ver Productos</a>
     </div>
@@ -109,5 +114,11 @@
             $imagenName.textContent = archivoInicial.name;
         });
     }
+
+    function limpiarFormulario() {
+        const formulario = document.getElementById('formulario');
+        formulario.reset();
+    }
+
 </script>
 

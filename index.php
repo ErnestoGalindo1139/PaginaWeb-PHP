@@ -2,6 +2,9 @@
 
 <?php include("includes/header.php") ?>
     <h1 class="titulo">Admin de tienda en linea</h1>
+
+    <?php include("includes/formulario.php") ?>
+
     <table class="tabla">
         <thead>
             <tr>
@@ -34,4 +37,3 @@
         </tbody>
     </table>
 
-    <?php include("includes/formulario.php") ?>
