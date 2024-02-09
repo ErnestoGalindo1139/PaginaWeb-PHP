@@ -120,6 +120,12 @@ a {
     border-radius: .4rem;
 }
 
+.btnLimpiar {
+    background-color: rgb(161, 195, 227);
+    color: black;
+    border: 2px solid rgb(86, 105, 122);
+}
+
 .btnAgregar {
     background-color: rgb(19, 183, 19);
     color: white;
@@ -152,6 +158,11 @@ a {
     background-color: rgb(255, 52, 52);
     color: white;
     border: 2px solid rgb(172, 0, 0);
+}
+
+.btnLimpiar:hover {
+    cursor: pointer;
+    background-color: rgb(147, 178, 207);
 }
 
 .btnAgregar:hover {

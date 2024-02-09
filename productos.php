@@ -1,22 +1,19 @@
-<?php include("db.php") ?>
+<?php include("./model/db.php") ?>
 
 <?php include("includes/header.php") ?>
-
 <div class="color">
 
     <div class="contenedor">
         
         <?php
         
-            $query = "SELECT * FROM productos";
-            $result_products = mysqli_query($conn, $query);
-    
-            while($row = mysqli_fetch_array($result_products)) { ?>
+            $sql = $con->query("SELECT * FROM productos");
+            while($datos = $sql->fetch_object()) { ?>
                 <div class="card">
-                    <h2> <?php echo $row['nombre_producto'] ?> </h2>
-                    <img width="150" src="<?php echo $row['url_producto'] ?>">
-                    <p> <?php echo $row['descripcion_producto'] ?> </p>
-                    <p> $ <?php echo $row['precio_producto'] ?> </p>
+                    <h2> <?= $datos ->nombre_producto ?> </h2>
+                    <img width="150" src="<?= $datos ->url_producto ?>">
+                    <p> <?= $datos ->descripcion_producto ?> </p>
+                    <p> $ <?= $datos ->precio_producto ?> </p>
                 </div>
             <?php } ?>
         

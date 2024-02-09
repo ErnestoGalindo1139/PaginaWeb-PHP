@@ -1,4 +1,4 @@
-<?php include("db.php") ?>
+<?php include("./model/db.php") ?>
 
 <?php include("includes/header.php") ?>
     <h1 class="titulo">Admin de tienda en linea</h1>
@@ -18,7 +18,7 @@
             <?php
             
                 $query = "SELECT * FROM productos";
-                $result_products = mysqli_query($conn, $query);
+                $result_products = mysqli_query($con, $query);
 
                 while($row = mysqli_fetch_array($result_products)) { ?>
                     <tr>
@@ -35,6 +35,3 @@
     </table>
 
     <?php include("includes/formulario.php") ?>
-
-</body>
-</html>
