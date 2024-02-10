@@ -1,6 +1,6 @@
 <?php include("./controller/crud.php") ?>
 
-<form id="formulario" class="formulario" method="POST" enctype="multipart/form-data">
+<form id="formulario"class="formulario" method="POST" enctype="multipart/form-data">
 
 
     <div class="campos">
