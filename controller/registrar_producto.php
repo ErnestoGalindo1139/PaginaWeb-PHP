@@ -14,7 +14,7 @@ global $imagen_nombre;
 if (!empty($_FILES["imagen"]["name"])) {
     $imagen_nombre = $_FILES["imagen"]["name"]; // Nombre
     $imagen_temporal = $_FILES["imagen"]["tmp_name"]; // Imagen
-    $ruta_destino = "../img/" . $imagen_nombre;  // Ruta
+    $ruta_destino = "./img/" . $imagen_nombre;  // Ruta
 
     // Guardar la imagen en la carpeta img
     move_uploaded_file($imagen_temporal, $ruta_destino);
@@ -33,7 +33,7 @@ if (!empty($_POST["btnAgregar"])) {
 
         if ($query->execute()) {
             echo "Datos insertados correctamente";
-            header("refresh:2;url=../index.php");
+            header("refresh:2;url=./index.php");
         } else {
             echo "Error al insertar datos: " . $con->error;
         }

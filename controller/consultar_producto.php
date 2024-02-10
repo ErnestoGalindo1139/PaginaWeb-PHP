@@ -10,8 +10,7 @@
         if (!empty($_POST["idProducto"])) {
             $valor_input = $_POST["idProducto"];
 
-            $sql = "SELECT nombre_producto, descripcion_producto, precio_producto, cantidad_producto, url_producto, id_categoria, id_proveedor FROM productos WHERE id_producto = '$valor_input'";
-
+            $sql = "SELECT id_producto, nombre_producto, descripcion_producto, precio_producto, cantidad_producto, url_producto, id_categoria, id_proveedor FROM productos WHERE id_producto = '$valor_input'";
             // Ejecutar la consulta
             $result = $con->query($sql);
             

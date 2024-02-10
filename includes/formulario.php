@@ -1,6 +1,6 @@
+<?php include("./controller/crud.php") ?>
 
-
-<form id="formulario" class="formulario" method="POST" action="./controller/registrar_producto.php" enctype="multipart/form-data">
+<form id="formulario" class="formulario" method="POST" enctype="multipart/form-data">
 
 
     <div class="campos">
@@ -66,7 +66,7 @@
                 </label>
                 <div class="input-name" id="imagenName">No se han seleccionado archivos</div>
             </div>
-            <img id="imgFormulario" alt="Selected Image" src="" hidden width="300" style="margin: 1rem auto;" />
+            <img id="imgFormulario" alt="Selected Image" src="../img/<?php echo isset($producto['url_producto']) ? $producto['url_producto'] : ''; ?>" <?php echo isset($producto['url_producto']) ? '' : 'hidden'; ?> width="300" style="margin: 1rem auto;" />
         </div>
 
         <div class="campo consultarProducto" style="margin: 3rem 0 2rem 0;">
@@ -74,7 +74,7 @@
                 <label for="idProducto">Consultar por ID</label>
                 <input type="number" id="idProducto" name="idProducto" placeholder="Introduzca un ID">
             </div>
-            <button type="button" class="btnConsultar" name="btnConsultar" style="" >Consultar</button>
+            <button class="btnConsultar" name="btnConsultar" style="" >Consultar</button>
         </div>
 
     </div>
@@ -82,11 +82,12 @@
     <div class="botones">
         <button type="button" class="btnLimpiar" name="btnLimpiar" onclick="limpiarFormulario()">Limpiar</button>
         <button type="submit" class="btnAgregar" name="btnAgregar" value="ok">Agregar</button>
-        <button type="button" class="btnModificar">Modificar</button>
-        <button type="button" class="btnEliminar">Eliminar</button>
+        <button class="btnModificar" name="btnModificar">Modificar</button>
+        <button class="btnEliminar" name="btnEliminar">Eliminar</button>
         <a class="btnVerProductos" href="./productos.php" target="_blank">Ver Productos</a>
     </div>
 
+    <input hidden id="id" name="id" type="text" value="<?php echo isset($producto['id_producto']) ? $producto['id_producto'] : ''; ?>" >
 </form>
 
 <script>

@@ -11,7 +11,7 @@
             while($datos = $sql->fetch_object()) { ?>
                 <div class="card">
                     <h2> <?= $datos ->nombre_producto ?> </h2>
-                    <img width="150" src="<?= $datos ->url_producto ?>">
+                    <img width="150" src="./img/<?= $datos ->url_producto ?>">
                     <p> <?= $datos ->descripcion_producto ?> </p>
                     <p> $ <?= $datos ->precio_producto ?> </p>
                 </div>
