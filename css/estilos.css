@@ -409,3 +409,46 @@ a {
     cursor: pointer;
     background-color: rgb(240, 145, 61);
 }
+
+.contenedorBotonesInicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    height: 100vh;
+}
+
+.botonesInicio {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.botonesInicio a {
+    padding: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+
+.btnAdmin {
+    color: white;
+    background-color: #4169E1;
+    border: 2px solid #1E90FF;
+}
+
+.btnAdmin:hover {
+    background-color: #1E90FF; 
+    border: 2px solid #4169E1; 
+}
+
+.btnProductos {
+    background-color: #E75480;
+    border: 2px solid #C5003C;
+}
+
+.btnProductos:hover {
+    background-color: #ea0b4e;
+    border: 2px solid #E75480;
+}

@@ -1,9 +1,9 @@
 <?php include("./controller/crud.php") ?>
 
 <div class="botonesPaginas">
-    <a class="btnAgregarCategoria" href="./categorias.php" target="_blank">Agregar Categoria</a>
-    <a class="btnAgregarProveedor" href="./proveedores.php" target="_blank">Agregar Proveedor</a>
-    <a class="btnVerProductos" href="./productos.php" target="_blank">Ver Productos</a>
+    <a class="btnAgregarCategoria" href="./categorias.php">Agregar Categoria</a>
+    <a class="btnAgregarProveedor" href="./proveedores.php">Agregar Proveedor</a>
+    <a class="btnVerProductos" href="./productos.php">Ver Productos</a>
 </div>
 <form id="formulario" class="formulario" method="POST" enctype="multipart/form-data">
 

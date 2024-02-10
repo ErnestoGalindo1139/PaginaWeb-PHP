@@ -5,7 +5,7 @@
 <h1 class="titulo">Categorias</h1>
 
 <div class="btnVolverContenedor">
-    <a class="btnVolver" href="./index.php" target="_blank">Ir al panel principal</a>
+    <a class="btnVolver" href="./index.php">Ir al panel principal</a>
 </div>
 
 <form id="formularioCategorias" class="formularioCategorias" method="POST" enctype="multipart/form-data">
