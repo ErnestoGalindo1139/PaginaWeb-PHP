@@ -71,7 +71,7 @@
                 </label>
                 <div class="input-name" id="imagenName">No se han seleccionado archivos</div>
             </div>
-            <img id="imgFormulario" alt="Selected Image" src="../img/<?php echo isset($producto['url_producto']) ? $producto['url_producto'] : ''; ?>" <?php echo isset($producto['url_producto']) ? '' : 'hidden'; ?> width="300" style="margin: 1rem auto;" />
+            <img id="imgFormulario" alt="Selected Image" src="./img/<?php echo isset($producto['url_producto']) ? $producto['url_producto'] : ''; ?>" <?php echo isset($producto['url_producto']) ? '' : 'hidden'; ?> width="300" style="margin: 1rem auto;" />
         </div>
 
         <div class="campo consultarProducto" style="margin: 3rem 0 2rem 0;">
@@ -128,8 +128,8 @@
         const cantidad = document.getElementById('cantidad');
         const categoria = document.getElementById('categoria');
         const proveedor = document.getElementById('proveedor');
-        const imagen = document.getElementById('imagen');
         const idProducto = document.getElementById('idProducto');
+        const imgFormulario = document.getElementById('imgFormulario');
 
         nombre.value = '';
         precio.value = '';
@@ -137,8 +137,8 @@
         cantidad.value = '';
         categoria.value = "0";
         proveedor.value = "0";
-        imagen.value = '';
         idProducto.value = '';
+        imgFormulario.remove();
 
     }
 
