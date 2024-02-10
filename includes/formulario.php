@@ -1,5 +1,10 @@
 <?php include("./controller/crud.php") ?>
 
+<div class="botonesPaginas">
+    <a class="btnAgregarCategoria" href="./categorias.php" target="_blank">Agregar Categoria</a>
+    <a class="btnAgregarProveedor" href="./proveedores.php" target="_blank">Agregar Proveedor</a>
+    <a class="btnVerProductos" href="./productos.php" target="_blank">Ver Productos</a>
+</div>
 <form id="formulario" class="formulario" method="POST" enctype="multipart/form-data">
 
 
@@ -84,7 +89,7 @@
         <button type="submit" class="btnAgregar" name="btnAgregar" value="ok">Agregar</button>
         <button class="btnModificar" name="btnModificar">Modificar</button>
         <button class="btnEliminar" name="btnEliminar">Eliminar</button>
-        <a class="btnVerProductos" href="./productos.php" target="_blank">Ver Productos</a>
+        
     </div>
 
     <input hidden id="id" name="id" type="text" value="<?php echo isset($producto['id_producto']) ? $producto['id_producto'] : ''; ?>" >
@@ -117,8 +122,24 @@
     }
 
     function limpiarFormulario() {
-        const formulario = document.getElementById('formulario');
-        formulario.reset();
+        const nombre = document.getElementById('nombre');
+        const precio = document.getElementById('precio');
+        const descripcion = document.getElementById('descripcion');
+        const cantidad = document.getElementById('cantidad');
+        const categoria = document.getElementById('categoria');
+        const proveedor = document.getElementById('proveedor');
+        const imagen = document.getElementById('imagen');
+        const idProducto = document.getElementById('idProducto');
+
+        nombre.value = '';
+        precio.value = '';
+        descripcion.value = '';
+        cantidad.value = '';
+        categoria.value = "0";
+        proveedor.value = "0";
+        imagen.value = '';
+        idProducto.value = '';
+
     }
 
 </script>
