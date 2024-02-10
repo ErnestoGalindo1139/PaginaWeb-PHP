@@ -8,6 +8,7 @@
     <table class="tabla">
         <thead>
             <tr>
+                <th>Id Producto</th>
                 <th>Nombre</th>
                 <th>Descripcion</th>
                 <th>Precio</th>
@@ -37,6 +38,7 @@
 
                 while($row = mysqli_fetch_array($result_products)) { ?>
                     <tr>
+                        <td> <?php echo $row['id_producto'] ?> </td>
                         <td> <?php echo $row['nombre_producto'] ?> </td>
                         <td> <?php echo $row['descripcion_producto'] ?> </td>
                         <td> <?php echo $row['precio_producto'] ?> </td>
